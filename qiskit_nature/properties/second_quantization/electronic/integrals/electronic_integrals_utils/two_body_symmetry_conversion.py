@@ -66,14 +66,14 @@ def _check_two_body_symmetry(tensor, test_number):
 
 def _check_two_body_symmetries(two_body_tensor, chemist=True):
     """
-    Return `True` if the rank-4 tensor `two_body_tensor` has the required symmetries for coefficents
+    Return `True` if the rank-4 tensor `two_body_tensor` has the required symmetries for coefficients
     of the two-electron terms.  If `chemist` is `True`, assume the input is in chemists' order,
     otherwise in physicists' order.
 
     If `two_body_tensor` is a correct tensor of indices, with the correct index order, it must pass the
-    tests. If `two_body_tensor` is a correct tensor of indicies, but the flag `chemist` is incorrect,
+    tests. If `two_body_tensor` is a correct tensor of indices, but the flag `chemist` is incorrect,
     it will fail the tests, unless the tensor has accidental symmetries.
-    This test may be used with care to discriminiate between the orderings.
+    This test may be used with care to discriminate between the orderings.
 
     References: HJO Molecular Electronic-Structure Theory (1.4.17), (1.4.38)
 
@@ -101,7 +101,7 @@ def find_index_order(two_body_tensor):
     See also: `chem_to_phys`, `phys_to_chem`.
 
     Note:
-    The first of `:chemist`, `:physicist`, and `:intermediate`, in that order, to pass the tests
+    The first of `:chemist`, `:physicist`, and `:intermediate`, in that order, to pass the testsd
     is returned. If `two_body_tensor` has accidental symmetries, it may in fact satisfy more
     than one set of symmetry tests. For example, if all elements have the same value, then the
     symmetries for all three index orders are satisfied.
